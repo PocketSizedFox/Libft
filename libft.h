@@ -23,5 +23,6 @@
   void ft_bzero(void *s, size_t n);
   void	*ft_memcpy(void *restrict str1, const void *restrict str2, size_t n);
   void	*ft_memccpy(void *dest, const void *src, int c, size_t size);
+  void	*ft_memmove(void *dst, const void *src, size_t len);
 #endif /* _LIBFT_H_ */
 
