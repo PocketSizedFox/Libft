@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 15:09:23 by klees             #+#    #+#             */
-/*   Updated: 2019/05/27 16:07:59 by klees            ###   ########.fr       */
+/*   Created: 2019/05/27 16:00:11 by klees             #+#    #+#             */
+/*   Updated: 2019/05/27 16:07:06 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
 	size_t	i;
-	int		s1_end;
 
 	i = 0;
-	while (s1[i])
-		i++;
-	s1_end = i;
-	while (s2[i - s1_end] && i - s1_end < n)
+	while (i < n && src[i])
 	{
-		s1[i] = s2[i - s1_end];
-		i++;
+		dst[i] = src[i];
+		i += 1;
 	}
-	s1[i] = '\0';
-	return (s1);
+	while (i < n)
+	{
+		dst[i] = '\0';
+		i += 1;
+	}
+	return (dst);
 }
