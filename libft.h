@@ -22,5 +22,6 @@
   char *ft_strncat(char *s1, const char *s2, size_t n);
   void ft_bzero(void *s, size_t n);
   void	*ft_memcpy(void *restrict str1, const void *restrict str2, size_t n);
+  void	*ft_memccpy(void *dest, const void *src, int c, size_t size);
 #endif /* _LIBFT_H_ */
 
