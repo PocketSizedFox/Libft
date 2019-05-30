@@ -33,5 +33,7 @@
   int	ft_isalpha(int c);
   int	ft_strncmp(const char *s1, const char *s2, size_t n);
   int	ft_isprint(int c);
+  void	*ft_memalloc(size_t size);
+  void	ft_memdel(void **ap);
 #endif /* _LIBFT_H_ */
 
