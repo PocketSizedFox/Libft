@@ -6,7 +6,7 @@
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:10:19 by klees             #+#    #+#             */
-/*   Updated: 2019/05/27 11:25:27 by klees            ###   ########.fr       */
+/*   Updated: 2019/05/30 11:44:31 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (++i < len)
 		{
 			if (dst == '\0' && src == '\0')
-				break;
+				break ;
 			*(dstc + i) = *(srcc + i);
 		}
 	return (dst);

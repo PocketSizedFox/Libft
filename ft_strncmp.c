@@ -6,9 +6,10 @@
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 10:53:56 by klees             #+#    #+#             */
-/*   Updated: 2019/05/28 10:56:09 by klees            ###   ########.fr       */
+/*   Updated: 2019/05/30 11:44:51 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

@@ -6,13 +6,13 @@
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 09:36:24 by klees             #+#    #+#             */
-/*   Updated: 2019/05/27 09:54:31 by klees            ###   ########.fr       */
+/*   Updated: 2019/05/30 11:38:19 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void* dest, const void* src, int c, size_t size)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t size)
 {
 	size_t			i;
 	unsigned char	*source;
