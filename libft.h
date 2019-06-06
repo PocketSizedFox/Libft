@@ -6,7 +6,7 @@
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 07:43:42 by klees             #+#    #+#             */
-/*   Updated: 2019/06/04 09:23:42 by klees            ###   ########.fr       */
+/*   Updated: 2019/06/06 08:41:48 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putchar(char c);
 int		ft_islower(char c);
 int		ft_isdigit(int c);
 int		ft_toupper(int c);
-int		ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 void	ft_putnbr(int nb);
 void	*ft_memalloc(size_t size);
 void	*ft_memset(void *b, int c, size_t len);
