@@ -5,32 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 10:47:11 by klees             #+#    #+#             */
-/*   Updated: 2019/05/30 11:46:17 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 12:12:37 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 12:12:39 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
-	if (to_find[0] == '\0')
-		return (str);
 	i = 0;
-	while (str[i] != '\0')
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	while (haystack[i] != '\0')
 	{
 		j = 0;
-		while (to_find[j] != '\0')
+		while (haystack[i + j] == needle[j])
 		{
-			if (str[i + j] != to_find[j])
-				break ;
+			if (needle[j + 1] == '\0')
+			{
+				return ((char *)haystack + i);
+			}
 			j++;
 		}
-		if (to_find[j] == '\0')
-			return (str + i);
 		i++;
 	}
 	return (0);

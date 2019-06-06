@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 10:31:22 by klees             #+#    #+#             */
-/*   Updated: 2019/06/03 10:39:56 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 12:10:52 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 12:11:05 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 char	*ft_strnew(size_t size)
 {
-	char	*s;
+	char	*str;
 
-	if (!(s = (char *)malloc(sizeof(char) * (size + 1))))
+	str = (char *)malloc(sizeof(char) * size + 1);
+	if (!str)
 		return (NULL);
-	ft_memset(s, '\0', size + 1);
-	return (s);
+	ft_bzero(str, size + 1);
+	return (str);
 }

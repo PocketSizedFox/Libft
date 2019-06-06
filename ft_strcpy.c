@@ -5,21 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:21:47 by klees             #+#    #+#             */
-/*   Updated: 2019/05/23 17:49:32 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 12:02:30 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 12:02:31 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strcpy(char *dst, const char *src)
 {
-	int i;
+	int	i;
 
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
+	i = -1;
+	while (*(src + ++i))
+		*(dst + i) = *(src + i);
+	*(dst + i) = '\0';
 	return (dst);
 }

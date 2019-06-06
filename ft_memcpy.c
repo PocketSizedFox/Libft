@@ -5,28 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 10:05:48 by klees             #+#    #+#             */
-/*   Updated: 2019/05/30 11:44:01 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 11:54:18 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 11:54:19 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *restrict str1, const void *restrict str2, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char *dst;
-	char *src;
+	size_t	i;
+	char	*ptr;
+	char	*ptr2;
 
-	dst = (char*)str1;
-	src = (char*)str2;
-	while (n > 0)
-	{
-		if (str1 == '\0' && str2 == '\0')
-			break ;
-		*dst = *src;
-		dst++;
-		src++;
-		n--;
-	}
-	return ((void*)str1);
+	ptr = dst;
+	ptr2 = (char *)src;
+	i = -1;
+	if (ptr == NULL && ptr2 == NULL)
+		return (0);
+	while (++i < n)
+		*(ptr + i) = *(ptr2 + i);
+	return (dst);
 }

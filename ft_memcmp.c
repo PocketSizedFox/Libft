@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:08:47 by klees             #+#    #+#             */
-/*   Updated: 2019/05/27 15:10:02 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 11:54:02 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 11:54:04 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,16 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char		*str1;
-	const unsigned char		*str2;
+	unsigned char	*s1c;
+	unsigned char	*s2c;
+	size_t			i;
 
-	if (s1 == s2 || n == 0)
+	i = -1;
+	s1c = (unsigned char *)s1;
+	s2c = (unsigned char *)s2;
+	while (++i < n && *(s1c + i) == *(s2c + i))
+		;
+	if (i == n)
 		return (0);
-	str1 = (const unsigned char *)s1;
-	str2 = (const unsigned char *)s2;
-	while (n--)
-	{
-		if (*str1 != *str2)
-			return (*str1 - *str2);
-		if (n)
-		{
-			str1++;
-			str2++;
-		}
-	}
-	return (0);
+	return (*(s1c + i) - *(s2c + i));
 }

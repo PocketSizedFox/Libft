@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 15:09:23 by klees             #+#    #+#             */
-/*   Updated: 2019/05/27 16:07:59 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 12:09:04 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 12:09:05 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,13 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	int		s1_end;
+	int	i;
+	int	j;
 
-	i = 0;
-	while (s1[i])
-		i++;
-	s1_end = i;
-	while (s2[i - s1_end] && i - s1_end < n)
-	{
-		s1[i] = s2[i - s1_end];
-		i++;
-	}
-	s1[i] = '\0';
+	i = -1;
+	j = (int)ft_strlen(s1);
+	while (*(s2 + ++i) && i < (int)n)
+		*(s1 + j++) = *(s2 + i);
+	*(s1 + j) = '\0';
 	return (s1);
 }

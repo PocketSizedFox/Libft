@@ -5,25 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 11:32:54 by klees             #+#    #+#             */
-/*   Updated: 2019/05/23 14:55:01 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 12:01:31 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 12:01:33 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
-{
-	int i;
-	int j;
+#include "libft.h"
 
-	i = 0;
-	while (dest[i] != '\0')
-		i++;
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
+char	*ft_strcat(char *s1, const char *s2)
+{
+	int	i;
+	int	j;
+
+	i = -1;
+	j = (int)ft_strlen(s1);
+	while (*(s2 + ++i))
+		*(s1 + j++) = *(s2 + i);
+	*(s1 + j) = '\0';
+	return (s1);
 }

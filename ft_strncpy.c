@@ -5,27 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 16:00:11 by klees             #+#    #+#             */
-/*   Updated: 2019/05/27 16:07:06 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 12:09:41 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 12:09:42 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t	i;
 
-	i = 0;
-	while (i < n && src[i])
-	{
-		dst[i] = src[i];
-		i += 1;
-	}
-	while (i < n)
-	{
-		dst[i] = '\0';
-		i += 1;
-	}
+	i = -1;
+	while (++i < len)
+		if (*(src + i))
+			*(dst + i) = *(src + i);
+		else
+			while (i < len)
+				*(dst + i++) = '\0';
 	return (dst);
 }

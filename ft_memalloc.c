@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 11:05:15 by klees             #+#    #+#             */
-/*   Updated: 2019/05/30 11:33:05 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 11:53:14 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 11:53:18 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,11 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void	*str;
-	size_t	i;
+	void	*mem;
 
-	i = 0;
-	str = NULL;
-	if ((str = ((void *)malloc(size))) == NULL)
+	mem = malloc(size);
+	if (!mem)
 		return (NULL);
-	while (i < size)
-	{
-		((unsigned char *)str)[i] = 0;
-		i++;
-	}
-	return (str);
+	ft_bzero(mem, size);
+	return (mem);
 }

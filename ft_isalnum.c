@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 09:06:04 by klees             #+#    #+#             */
-/*   Updated: 2019/05/30 09:09:31 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 11:48:32 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 11:48:40 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int		ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }

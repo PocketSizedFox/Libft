@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 12:14:48 by klees             #+#    #+#             */
-/*   Updated: 2019/06/06 12:14:50 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 11:51:40 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 11:51:42 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	if (ft_islower(c))
-		return (c - 32);
-	return (c);
+	if ((*alst)->next)
+		ft_lstdel(&(*alst)->next, del);
+	ft_lstdelone(&(*alst), del);
 }

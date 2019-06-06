@@ -5,12 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 08:43:06 by klees             #+#    #+#             */
-/*   Updated: 2019/06/04 09:12:09 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 11:51:00 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 11:51:02 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	get_str_len(int n)
+{
+	size_t	i;
+
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
+}
 
 char			*ft_itoa(int n)
 {
@@ -18,7 +28,7 @@ char			*ft_itoa(int n)
 	size_t			str_len;
 	unsigned int	n_cpy;
 
-	str_len = ft_get_str_len(n);
+	str_len = get_str_len(n);
 	n_cpy = n;
 	if (n < 0)
 	{

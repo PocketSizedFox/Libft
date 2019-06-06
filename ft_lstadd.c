@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 12:14:48 by klees             #+#    #+#             */
-/*   Updated: 2019/06/06 12:14:50 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 11:51:15 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 11:51:17 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (ft_islower(c))
-		return (c - 32);
-	return (c);
+	new->next = *alst;
+	*alst = new;
 }

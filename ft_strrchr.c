@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 10:18:46 by klees             #+#    #+#             */
-/*   Updated: 2019/05/28 10:19:22 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 12:11:53 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 12:11:55 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		len;
+	int	i;
 
-	len = ft_strlen((char *)s);
-	while (0 != len && s[len] != (char)c)
-		len--;
-	if (s[len] == (char)c)
-		return ((char *)&s[len]);
+	i = (int)ft_strlen(s) + 1;
+	while (i--)
+		if (*(s + i) == (char)c)
+			return ((char *)s + i);
 	return (NULL);
 }

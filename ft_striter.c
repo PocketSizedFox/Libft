@@ -5,17 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 07:47:29 by klees             #+#    #+#             */
-/*   Updated: 2019/06/04 07:48:40 by klees            ###   ########.fr       */
+/*   Created: 2019/06/06 12:03:31 by klees             #+#    #+#             */
+/*   Updated: 2019/06/06 12:03:34 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char*))
+void	ft_striter(char *s, void (*f)(char *))
 {
-	if (s == NULL || f == NULL)
-		return ;
-	while (s != NULL && *s)
-		f(s++);
+	int	i;
+
+	i = 0;
+	if (s && f)
+		while (*(s + i))
+			f(s + i++);
 }
