@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 11:48:13 by klees             #+#    #+#             */
-/*   Updated: 2019/06/06 11:48:18 by klees            ###   ########.fr       */
+/*   Created: 2019/06/24 12:00:46 by klees             #+#    #+#             */
+/*   Updated: 2019/06/24 12:16:26 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_get_str_len(int n)
+size_t	ft_get_nbr_len(int n)
 {
-	size_t	i;
+	size_t i;
 
 	i = 1;
 	while (n /= 10)

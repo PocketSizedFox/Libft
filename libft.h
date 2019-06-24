@@ -6,7 +6,7 @@
 /*   By: klees <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 11:16:01 by klees             #+#    #+#             */
-/*   Updated: 2019/06/06 11:33:22 by klees            ###   ########.fr       */
+/*   Updated: 2019/06/24 12:22:19 by klees            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+size_t				ft_get_nbr_len(int n);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_isalnum(int c);
