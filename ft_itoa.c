@@ -18,7 +18,7 @@ char			*ft_itoa(int n)
 	size_t			str_len;
 	unsigned int	n_cpy;
 
-	str_len = get_nbr_len(n);
+	str_len = ft_get_nbr_len(n);
 	n_cpy = n;
 	if (n < 0)
 	{
@@ -27,10 +27,10 @@ char			*ft_itoa(int n)
 	}
 	if (!(str = ft_strnew(str_len)))
 		return (NULL);
-	str[--str_len] = n_cpy % 10 + '0';
+	str[--str_len] = n_cpy % 10 + 48;
 	while (n_cpy /= 10)
-		str[--str_len] = n_cpy % 10 + '0';
+		str[--str_len] = n_cpy % 10 + 48;
 	if (n < 0)
-		*(str + 0) = '-';
+		*str = '-';
 	return (str);
 }
